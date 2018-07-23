@@ -40,10 +40,20 @@ function crop($reid, $channel, $task) {
     $nameNewImg = uniqid() . ".png";
     $newImgPath = '../images/' . $nameNewImg;
     $func($lNewImageDescriptor, $newImgPath);
-
-    $dns = json_decode(file_get_contents('config/config.json'), true)['dns'];
-
-    file_get_contents($data['return_url'] . '?url=' . $dns . '/' . $nameNewImg);
+     
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_URL, 'config/config.json');
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+  
+    
+    $dns = json_decode(curl_exec(), true)['dns'];
+   
+    
+    curl_setopt($curl, CURLOPT_URL, $data['return_url'] . '?url=' . $dns . '/' . $nameNewImg);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    
+    curl_exec();
+    curl_close($curl);
 }
 
 $queue->subscribe(['task'], 'crop');
