@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/demon/vendor/phpredis/rpm" />
+      <path value="$PROJECT_DIR$/demon/vendor/phpredis/debian" />
+      <path value="$PROJECT_DIR$/demon/vendor/phpredis/.libs" />
+      <path value="$PROJECT_DIR$/demon/vendor/phpredis/build" />
+      <path value="$PROJECT_DIR$/demon/vendor/phpredis/autom4te.cache" />
+      <path value="$PROJECT_DIR$/demon/vendor/phpredis/modules" />
+      <path value="$PROJECT_DIR$/demon/vendor/composer" />
+      <path value="$PROJECT_DIR$/demon/vendor/phpredis/include" />
+      <path value="$PROJECT_DIR$/demon/vendor/phpredis/liblzf" />
+      <path value="$PROJECT_DIR$/demon/vendor/phpredis/tests" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
+</project>

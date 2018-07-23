@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/demon/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/demon/vendor/phpredis/.libs" />
+      <excludeFolder url="file://$MODULE_DIR$/demon/vendor/phpredis/autom4te.cache" />
+      <excludeFolder url="file://$MODULE_DIR$/demon/vendor/phpredis/build" />
+      <excludeFolder url="file://$MODULE_DIR$/demon/vendor/phpredis/debian" />
+      <excludeFolder url="file://$MODULE_DIR$/demon/vendor/phpredis/include" />
+      <excludeFolder url="file://$MODULE_DIR$/demon/vendor/phpredis/liblzf" />
+      <excludeFolder url="file://$MODULE_DIR$/demon/vendor/phpredis/modules" />
+      <excludeFolder url="file://$MODULE_DIR$/demon/vendor/phpredis/rpm" />
+      <excludeFolder url="file://$MODULE_DIR$/demon/vendor/phpredis/tests" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
