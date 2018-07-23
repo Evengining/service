@@ -2,7 +2,6 @@
 
 try {
     $config = json_decode(file_get_contents('config/config.json'), true);
-    global $queue;
     $queue = new Redis();
     $queue->connect($config['host'], $config['port']);
     $queue->setOption(Redis::OPT_READ_TIMEOUT, -1);
