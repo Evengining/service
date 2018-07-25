@@ -46,14 +46,17 @@ function crop($reid, $channel, $task) {
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
   
     
-    $dns = json_decode(curl_exec(), true)['dns'];
+    $dns = json_decode(curl_exec($curl), true)['dns'];
    
     
-    curl_setopt($curl, CURLOPT_URL, $data['return_url'] . '?url=' . $dns . '/' . $nameNewImg);
+    curl_setopt($curl, CURLOPT_URL, $data['return_url'] . 'hhh?url=' . $dns . '/' . $nameNewImg);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
     
-    curl_exec();
+    curl_exec($curl);
     curl_close($curl);
+
+    imagedestroy($lInitialImageDescriptor);
+    imagedestroy($lNewImageDescriptor);
 }
 
 $queue->subscribe(['task'], 'crop');
