@@ -40,18 +40,14 @@ function crop($reid, $channel, $task) {
     $nameNewImg = uniqid() . ".png";
     $newImgPath = '../images/' . $nameNewImg;
     $func($lNewImageDescriptor, $newImgPath);
-     
+
+    $conf = fopen('config/config.json', 'r');
+    $dns = json_decode(fread($conf, 4096), true)['dns'];
+    fclose($conf);
+
     $curl = curl_init();
-    curl_setopt($curl, CURLOPT_URL, 'config/config.json');
+    curl_setopt($curl, CURLOPT_URL, $data['return_url'] . '?url=' . $dns . '/' . $nameNewImg);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-  
-    
-    $dns = json_decode(curl_exec($curl), true)['dns'];
-   
-    
-    curl_setopt($curl, CURLOPT_URL, $data['return_url'] . 'hhh?url=' . $dns . '/' . $nameNewImg);
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-    
     curl_exec($curl);
     curl_close($curl);
 

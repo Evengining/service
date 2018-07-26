@@ -6,7 +6,7 @@ services:
     ports:
       - 5000:80
     volumes:
-      - ./config/:/var/www/src/config/
+      - ./config/:/var/www/html/config/
     depends_on:
       - redis
 
@@ -14,6 +14,7 @@ services:
     build: worker/
     volumes:
       - ./images/:/usr/app/images/
+      - ./config/:/usr/app/src/config/
     depends_on:
       - nginx
       - redis
