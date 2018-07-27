@@ -24,6 +24,3 @@ try {
 } catch (TypeError $e) {
     echo "Error in parameters.";
 }
-
-
-
