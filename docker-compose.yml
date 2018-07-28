@@ -15,6 +15,7 @@ services:
     volumes:
       - ./images/:/usr/app/images/
       - ./config/:/usr/app/src/config/
+      - ./log/:/usr/app/log/
     depends_on:
       - nginx
       - redis

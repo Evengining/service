@@ -53,6 +53,9 @@ function crop($reid, $channel, $task) {
 
     imagedestroy($lInitialImageDescriptor);
     imagedestroy($lNewImageDescriptor);
+
+    $messageLog = "Date: " . date('Y-m-d H:i:s') . "\n" . "Task: " . $task . "\n" . "New Image Path: " . $newImgPath . "\n\r";
+    error_log($messageLog, 3, '../log/logs.log');
 }
 
 $queue->subscribe(['task'], 'crop');
